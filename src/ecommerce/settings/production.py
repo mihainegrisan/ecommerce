@@ -1,7 +1,7 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['ip-address', 'mysite.com']
+ALLOWED_HOSTS = ['ecommerce-mihai.herokuapp.com',]
 
 INSTALLED_APPS += [
 
