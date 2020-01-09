@@ -1,15 +1,8 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['ecommerce-mihai.herokuapp.com',]
+ALLOWED_HOSTS = ['ecommerce-mihai.herokuapp.com']
 
-INSTALLED_APPS += [
-
-]
-
-MIDDLEWARE += [
-
-]
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME':'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
