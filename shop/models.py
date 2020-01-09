@@ -74,6 +74,9 @@ class Item(models.Model):
     #     self.slug = slugify(value, allow_unicode=True)
     #     super().save(*args, **kwargs)
 
+    class Meta:
+        ordering = ['-id']
+
 
 class CartItem(models.Model):
     user = models.ForeignKey(
