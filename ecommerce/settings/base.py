@@ -1,6 +1,6 @@
 import os
 from django.contrib.messages import constants as messages
-
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SECRET_KEY = os.environ.get('SECRET_KEY_MIHAI_SHOP')
@@ -144,3 +144,6 @@ AUTHENTICATION_BACKENDS = (
 # STRIPE DEVELOPMENT KEY
 STRIPE_TEST_PUBLISHABLE_KEY = os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY')
 STRIPE_TEST_SECRET_KEY = os.environ.get('STRIPE_TEST_SECRET_KEY')
+
+
+django_heroku.settings(locals())
