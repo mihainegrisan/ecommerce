@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['ecommerce-mihai.herokuapp.com']
 
 
@@ -22,3 +22,5 @@ X_FRAME_OPTIONS = 'DENY'
 SECURE_HSTS_SECONDS = 300  # set low, but when site is ready for deployment, set to at least 15768000 (6 months)
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
+
+USE_X_FORWARDED_HOST = True
