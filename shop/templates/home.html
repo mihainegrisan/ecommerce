@@ -21,19 +21,18 @@
 
           <!-- Links -->
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">All
-                <span class="sr-only">(current)</span>
+            <li class="nav-item {% if section == 'home' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'shop:home' %}">All
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Shirts</a>
+            <li class="nav-item {% if section == 'S' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'shop:filter-by-category' 'S' %}">Shirts</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sport wears</a>
+            <li class="nav-item {% if section == 'SW' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'shop:filter-by-category' 'SW' %}">Sport wears</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Outwears</a>
+            <li class="nav-item {% if section == 'OW' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'shop:filter-by-category' 'OW' %}">Outwears</a>
             </li>
 
           </ul>

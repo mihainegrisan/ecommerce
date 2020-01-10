@@ -349,7 +349,27 @@ class HomeView(ListView):
     model = Item
     template_name = 'home.html'
     context_object_name = 'items' #object_list
-    paginate_by = 10
+    paginate_by = 4
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['section'] = 'home'
+        return context
+
+
+class CategoryListView(ListView):
+    model = Item
+    template_name = 'home.html'
+    context_object_name = 'items' #object_list
+    paginate_by = 4
+
+    def get_queryset(self):
+        return Item.objects.filter(category=self.kwargs['category'])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['section'] = self.kwargs['category']
+        return context
 
 
 class ItemDetailView(DetailView):
