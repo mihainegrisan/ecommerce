@@ -349,7 +349,7 @@ class HomeView(ListView):
     model = Item
     template_name = 'home.html'
     context_object_name = 'items' #object_list
-    paginate_by = 4
+    paginate_by = 4 
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
