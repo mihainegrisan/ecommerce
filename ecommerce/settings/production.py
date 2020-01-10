@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['ecommerce-mihai.herokuapp.com']
 
 
